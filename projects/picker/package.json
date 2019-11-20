@@ -1,6 +1,6 @@
 {
   "name": "ng-pick-datetime",
-  "version": "8.0.0",
+  "version": "8.0.3",
   "description": "Angular Date Time Picker",
   "keywords": [
     "Angular",
@@ -9,11 +9,11 @@
     "timepicker",
     "time picker"
   ],
-  "author": "daniel pan <myron.yk.pan@gmail.com>",
+  "author": "Sebastien Bousquet<sebastien.bousquet@gisaia.com>",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/DanielYKPan/date-time-picker.git"
+    "url": "https://github.com/gisaia/date-time-picker.git"
   },
   "peerDependencies": {
     "@angular/common": "~8.2.10",
