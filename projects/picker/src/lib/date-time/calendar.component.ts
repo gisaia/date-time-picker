@@ -34,14 +34,14 @@ import { Subscription } from 'rxjs';
     exportAs: 'owlDateTimeCalendar',
     templateUrl: './calendar.component.html',
     styleUrls: ['./calendar.component.scss'],
+    host:{
+      '[class.owl-dt-calendar]': 'owlDTCalendarClass'
+    },
     preserveWhitespaces: false,
     changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class OwlCalendarComponent<T>
     implements OnInit, AfterContentInit, AfterViewChecked, OnDestroy {
-      @HostBinding('class.owl-dt-calendar') get myTransition() {
-        return 'owlDTCalendarClass';
-      }
     /**
      * Date filter for the month and year view
      * */
