@@ -1,6 +1,6 @@
 {
   "name": "@gisaia-team/ng-pick-datetime",
-  "version": "8.0.4",
+  "version": "10.0.0-beta.0",
   "description": "Angular Date Time Picker",
   "keywords": [
     "Angular",
@@ -16,8 +16,11 @@
     "url": "https://github.com/gisaia/date-time-picker.git"
   },
   "peerDependencies": {
-    "@angular/common": "~8.2.10",
-    "@angular/core": "~8.2.10",
-    "@angular/cdk": "^8.2.3"
+    "@angular/common": "~10.0.2",
+    "@angular/core": "~10.0.2",
+    "@angular/cdk": "~10.0.1"
+  },
+  "dependencies": {
+    "tslib": "^2.0.0"
   }
 }

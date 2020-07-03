@@ -2335,9 +2335,9 @@ class StandardDateTimePicker {
     pickerMode = 'popup';
     opened = false;
     disabled = false;
-    @ViewChild('dt', { static: false })
+    @ViewChild('dt')
     dateTimePicker: OwlDateTimeComponent<Date>;
-    @ViewChild(OwlDateTimeInputDirective, { static: false })
+    @ViewChild(OwlDateTimeInputDirective)
     dateTimePickerInput: OwlDateTimeInputDirective<Date>;
 }
 
@@ -2353,9 +2353,9 @@ class RangeDateTimePicker {
     selectMode = 'range';
     pickerType = 'both';
     startAt = new Date(2020, JAN, 1);
-    @ViewChild('dt', { static: false })
+    @ViewChild('dt')
     dateTimePicker: OwlDateTimeComponent<Date>;
-    @ViewChild(OwlDateTimeInputDirective, { static: false })
+    @ViewChild(OwlDateTimeInputDirective)
     dateTimePickerInput: OwlDateTimeInputDirective<Date>;
 }
 
@@ -2374,7 +2374,7 @@ class MultiInputDateTimePicker {}
     `
 })
 class NoInputDateTimePicker {
-    @ViewChild('dt', { static: false })
+    @ViewChild('dt')
     dateTimePicker: OwlDateTimeComponent<Date>;
 }
 
@@ -2387,7 +2387,7 @@ class NoInputDateTimePicker {
 class DateTimePickerWithStartAt {
     date = new Date(2020, JAN, 1);
     startDate = new Date(2010, JAN, 1);
-    @ViewChild('dt', { static: false })
+    @ViewChild('dt')
     dateTimePicker: OwlDateTimeComponent<Date>;
 }
 
@@ -2402,7 +2402,7 @@ class DateTimePickerWithStartAt {
 class DateTimePickerWithStartView {
     date = new Date(2020, JAN, 1);
     startView = 'month';
-    @ViewChild('dt', { static: false })
+    @ViewChild('dt')
     dateTimePicker: OwlDateTimeComponent<Date>;
 
     onMonthSelection() {}
@@ -2419,9 +2419,9 @@ class DateTimePickerWithStartView {
 class DateTimePickerWithNgModel {
     moment: Date[] | Date | null = null;
     selectMode = 'single';
-    @ViewChild('dt', { static: false })
+    @ViewChild('dt')
     dateTimePicker: OwlDateTimeComponent<Date>;
-    @ViewChild(OwlDateTimeInputDirective, { static: false })
+    @ViewChild(OwlDateTimeInputDirective)
     dateTimePickerInput: OwlDateTimeInputDirective<Date>;
 }
 
@@ -2435,11 +2435,11 @@ class DateTimePickerWithNgModel {
 })
 class DateTimePickerWithFormControl {
     formControl = new FormControl();
-    @ViewChild('dt', { static: false })
+    @ViewChild('dt')
     dateTimePicker: OwlDateTimeComponent<Date>;
-    @ViewChild(OwlDateTimeInputDirective, { static: false })
+    @ViewChild(OwlDateTimeInputDirective)
     dateTimePickerInput: OwlDateTimeInputDirective<Date>;
-    @ViewChild(OwlDateTimeTriggerDirective, { static: false })
+    @ViewChild(OwlDateTimeTriggerDirective)
     dateTimePickerToggle: OwlDateTimeTriggerDirective<Date>;
 }
 
@@ -2451,9 +2451,9 @@ class DateTimePickerWithFormControl {
     `
 })
 class DateTimePickerWithTrigger {
-    @ViewChild('dt', { static: false })
+    @ViewChild('dt')
     dateTimePicker: OwlDateTimeComponent<Date>;
-    @ViewChild(OwlDateTimeInputDirective, { static: false })
+    @ViewChild(OwlDateTimeInputDirective)
     dateTimePickerInput: OwlDateTimeInputDirective<Date>;
 }
 
@@ -2466,11 +2466,11 @@ class DateTimePickerWithTrigger {
     `
 })
 class DateTimePickerWithMinAndMaxValidation {
-    @ViewChild('dt', { static: false })
+    @ViewChild('dt')
     dateTimePicker: OwlDateTimeComponent<Date>;
-    @ViewChild(OwlDateTimeInputDirective, { static: false })
+    @ViewChild(OwlDateTimeInputDirective)
     dateTimePickerInput: OwlDateTimeInputDirective<Date>;
-    @ViewChild(OwlDateTimeTriggerDirective, { static: false })
+    @ViewChild(OwlDateTimeTriggerDirective)
     dateTimePickerToggle: OwlDateTimeTriggerDirective<Date>;
 
     date: Date | null;
@@ -2488,11 +2488,11 @@ class DateTimePickerWithMinAndMaxValidation {
     `
 })
 class DateTimePickerWithFilterValidation {
-    @ViewChild('dt', { static: false })
+    @ViewChild('dt')
     dateTimePicker: OwlDateTimeComponent<Date>;
-    @ViewChild(OwlDateTimeInputDirective, { static: false })
+    @ViewChild(OwlDateTimeInputDirective)
     dateTimePickerInput: OwlDateTimeInputDirective<Date>;
-    @ViewChild(OwlDateTimeTriggerDirective, { static: false })
+    @ViewChild(OwlDateTimeTriggerDirective)
     dateTimePickerToggle: OwlDateTimeTriggerDirective<Date>;
     date: Date;
     filter = (date: Date) => date.getDate() != 1;
@@ -2510,11 +2510,11 @@ class DateTimePickerWithFilterValidation {
     `
 })
 class DateTimePickerWithChangeAndInputEvents {
-    @ViewChild('dt', { static: false })
+    @ViewChild('dt')
     dateTimePicker: OwlDateTimeComponent<Date>;
-    @ViewChild(OwlDateTimeInputDirective, { static: false })
+    @ViewChild(OwlDateTimeInputDirective)
     dateTimePickerInput: OwlDateTimeInputDirective<Date>;
-    @ViewChild(OwlDateTimeTriggerDirective, { static: false })
+    @ViewChild(OwlDateTimeTriggerDirective)
     dateTimePickerToggle: OwlDateTimeTriggerDirective<Date>;
 
     handleChange() {}
@@ -2537,9 +2537,9 @@ class DateTimePickerWithISOStrings {
     min = new Date(2017, JAN, 1).toISOString();
     max = new Date(2017, DEC, 31).toISOString();
     startAt = new Date(2017, JUL, 1).toISOString();
-    @ViewChild('dt', { static: false })
+    @ViewChild('dt')
     dateTimePicker: OwlDateTimeComponent<Date>;
-    @ViewChild(OwlDateTimeInputDirective, { static: false })
+    @ViewChild(OwlDateTimeInputDirective)
     dateTimePickerInput: OwlDateTimeInputDirective<Date>;
 }
 
@@ -2553,6 +2553,6 @@ class DateTimePickerWithEvents {
     selected: Date | null = null;
     openedSpy = jasmine.createSpy('opened spy');
     closedSpy = jasmine.createSpy('closed spy');
-    @ViewChild('dt', { static: false })
+    @ViewChild('dt')
     dateTimePicker: OwlDateTimeComponent<Date>;
 }
